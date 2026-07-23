@@ -1,33 +1,29 @@
 
 # Main Topics
 * [Basic Code structure](index.md) 
-* [Variables (and variable size)](1variables.md) -#include <stdint.h> for uint8_t, also overflow
-* [Control structures](2controlstructures.md), especially switch (x) case 1:..break; default
+* [Variables (and variable size)](1variables.md) 
+* [Control structures](2controlstructures.md)
 
-* [Basic Macros & Bitwise operations ](3basicmacros_bitwiseoperations.md)  #define X (1<<2)
-* [Bitwise operations](4bitwiseoperations.md) 		<<, set: x|=, clear x&= ~mask. Toggle: x^=mask
+* [Basic Macros & Bitwise operations ](3basicmacros_bitwiseoperations.md)  
+<!--
+* [Functions](4functions.md)
 
-<!-->
-
-Also include guard	#ifndef, #ifdef, #define xx
-
-* functions , pass by value & ref
+ pass by value & ref
 static, extern, code organisation in files  (?)
 
-
-
-
+[Enumerated Types](enumerated_types.md)
 * Enum 	enum DoW {m,t,w th, f};	enum DoW kofi= m; (use FSM), use in switch case
 
-* intro to structs & pointers, struct name
 
+[Structures]
+* intro to structs & pointers, struct name
 * struct data {int in; int out, byte status};
 
+[Pointers]
 * macro definitions	#define P(x) (1<<x)
 
-
+[Arrays]
 * arrays,	int a[]..
-
 
 
 #define PP(x) printf("value of #x is %d\n", x)
