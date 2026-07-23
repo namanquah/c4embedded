@@ -25,8 +25,29 @@ if (a!=b){
 If statements can be nested and if statements can be chained eg if (cond)... else if (cond)... else if (cond) ... else...
 
 ### Conditions:
-Conditions include 
+Comparisions include 
 < , > , >=, <=, !=, == 
+
+Anyting that evaluates to zero is false. Everything else is true. Thus if x is 3 and y is 4, then `if(x-y) ` condition evaluates to true.
+
+Watch out for assignment instead of checking for equivalence.
+```c
+int x=3;
+int y=4;
+if (x==y){
+    print ("equivalent\n"); 
+} else{
+    print("NOT equivalent\n");      //this will print
+}
+
+if (x=y){
+    print ("equivalent\n");         //this will print. Why??
+} else{
+    print("NOT equivalent\n");      
+}
+
+
+```
 
 ## For Loops
 General format:

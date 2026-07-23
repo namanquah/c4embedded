@@ -31,4 +31,24 @@ static, extern, code organisation in files  (?)
 Typedef
 
 
-->
+-->
+
+<!--
+## trying out latex text
+
+This is inline equation.
+$p= \phi + 10 \theta = 24 \frac{dy}{dx}$
+
+Centered equations
+$$
+k_{n+1} = n^2 + k_n^2 - k_{n-1}
+$$
+
+The following are aligned using &=
+$$\begin{aligned}
+(a+b)^2 &= a^2 + 2ab + b^2 \\
+    (a-b)^2 &= a^2 - 2ab + b^2\\
+    \phi + 10 \theta &= 24 \frac{dy}{dx}
+\end{aligned}$$
+
+-->
