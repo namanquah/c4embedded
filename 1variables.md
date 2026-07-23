@@ -116,6 +116,36 @@ There is a consequence of storing a large number in a small size. It gets trunca
 1. Thee largest number that can be stored in uint8_t is 255.
 2. If it is stored in a **signed** type, then if the first bit is 1, it will a negative number, stored in _two's complement notation_. The `int8_t` type stores numbers from -128 to +127
 
+## Arithmetic
+**Supplementary useful information**  Numbers can be mixed together but be careful of <font color="red">integer division </font>
+```c
+float x= 44.4;
+int y=22;
+x = x+y;        //this is fine. 66.4
+printf("%f\n",x);
+y= y+x;         //will give a warning, but answer is 66 (decimal is dropped)
+                // avoid the warning by casting
+printf("%d\n",y);            
+y=22;
+int z=3;
+float a=y/z;    //results in 7 ie 22/3 :This an integer division. The franctional part is lost
+printf("%f\n",a);
+a= z/y;         //results in 0  ie 3/22: This is integer division there is no whole number part
+printf("%f\n",a);
+a= (float)z/y;  //result is 0.136364, becuae z has been cast as float
+printf("%f\n",a);
+```
+
+
+The output will be as follows:
+```
+66.400000
+88
+7.000000
+0.000000
+0.136364
+
+```
 ---
 # Examples
 

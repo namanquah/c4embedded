@@ -24,6 +24,10 @@ if (a!=b){
 ```
 If statements can be nested and if statements can be chained eg if (cond)... else if (cond)... else if (cond) ... else...
 
+### Conditions:
+Conditions include 
+< , > , >=, <=, !=, == 
+
 ## For Loops
 General format:
 ```c
@@ -107,7 +111,16 @@ switch (x){
 }
 ```
 
-If the `break` is missing, it will cause subseqent statements to executed even if not for that case.
+If the `break` is missing, it will cause subseqent statements to executed even if not for that case. Output of the snippet above will be
+```
+not a number between 1 and 3
+```
+If x was 2, then output will be
+```
+x is two
+x is also even
+```
+
 
 # Examples
 Determine the output of the following code snippet. Determine it manually (before you ever consider running the code on say onlinegdb.com)
