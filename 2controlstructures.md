@@ -110,11 +110,11 @@ switch (x){
 If the `break` is missing, it will cause subseqent statements to executed even if not for that case.
 
 # Examples
-Determine the output of the following code snippet
+Determine the output of the following code snippet. Determine it manually (before you ever consider running the code on say onlinegdb.com)
 
 ```c
 /**
-* code from day1- basic C control structures (while, for, switch)
+* basic C control structures (while, for, switch)
 * variable sizes, working with uint8_t etc
 */
 

@@ -33,11 +33,11 @@ int main(){
 ## Bits, Binary, HEX and Fixed size integer variables
 
 
-Know this, especially the conversion from BIN to HEX and vice-versa for at least 0-15
+Know this, especially the conversion from BIN to HEX and vice-versa for at least 0-15. Hex numbers are usually written preceeded by 0x eg 15DEC or 1111BIN is 0xF (in HEX) 
 
 
 | Number (Decimal) | Binary | Hexadecimal |
-| :--- | :--- | :--- |
+| :---: | :--- | :---: |
 | **0** | 0000 | 0 |
 | **1** | 0001 | 1 |
 | **2** | 0010 | 2 |
@@ -66,11 +66,11 @@ Some easy things to rembemer:
 
 Given any base 10(deicmal) number you can convert to HEX or BIN with say a calculator (or other means). Given a HEX number, you can convert to BIN quckly by writing out each number as its equivalent 4-bit number. Examples:
 
+|HEX.     | Binary Equivalent   |
 |-------- | --------------------|
 | 0xF1A3  | 1111 0001 1010 0011 |
-|-------- | --------------------|
 | 0x1C01  | 0001 1100 0000 0001 |
-|-------- | --------------------|
+
 
 These two numbers above are all 16-bits long (2 bytes each)
 
@@ -78,7 +78,8 @@ _An integer may be 4 bytes long (or 2, depending on the hardware archtecture)_
 
 The `int` type on the STM32 (and ARM processors) is 4 bytes. If we wish to store a number in exactly 8 or 16 bits, a differnt type can be used. For that, include _stdint.h_, which has the appropriate definitions. They key types are as follows:
 
-|-----------| ----- |
+| Type      | description|
+|-----------|-----------------------|
 |uint8_t    |Unsigned 8-bit integer |
 |int8_t     |Signed 8-bit integer |
 |uint16_t   |Unsigned 16-bit integer |
