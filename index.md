@@ -1,11 +1,11 @@
-#C programming tutorial
+# C programming tutorial
 
 This is an abridged version of my appendix on C programming. This will be a mix of totorial and brief exercises to try.
 
-To run C programs, a compiler is needed. YOu may install VSCode as an editor and include a C extension, or simply visit [online GDB] (https://www.onlinegdb.com/) to execute code without installing anything.  For online gdb, do select C as the language.
+To run C programs, a compiler is needed. YOu may install VSCode as an editor and include a C extension, or simply visit [online GDB](https://www.onlinegdb.com/) to execute code without installing anything.  For online gdb, do select C as the language.
 
 
-##first program: _Hello World!_
+## first program: _Hello World!_
 The first program to excute is a hello world program 
 
 It will look as follows:
@@ -35,4 +35,4 @@ Run this and see output
 
 ---
 
-#Hello world ++
+# Hello world ++
