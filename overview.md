@@ -5,17 +5,18 @@
 * [Control structures](2controlstructures.md)
 
 * [Basic Macros & Bitwise operations ](3basicmacros_bitwiseoperations.md)  
-<!--
 * [Functions](4functions.md)
+<!--
+
 
  pass by value & ref
 static, extern, code organisation in files  (?)
 
-[Enumerated Types](enumerated_types.md)
+* [Enumerated Types](5enumerated_types.md)
 * Enum 	enum DoW {m,t,w th, f};	enum DoW kofi= m; (use FSM), use in switch case
 
 
-[Structures]
+* [Structures](6structures.md)
 * intro to structs & pointers, struct name
 * struct data {int in; int out, byte status};
 
