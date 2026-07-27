@@ -70,7 +70,7 @@ sum of 2 and 10 is 12
 ```
 
 ## Passing parametes by Value
-Parameters passed this way do not impact variables in the calling function. In this case main() is the calling function and main() has its own variables.
+Functions may modify values passed this way, but do not impact variables in the calling function. In this case main() is the calling function it has its own copy of the variables.
 
 ```c
 #include <stdio.h>
@@ -79,33 +79,24 @@ int main(){
     int result=0;
     int x=4;
     int y=5;
-    int a=40;
-    int b=50;
     printf("before call: value of x=%d  y=%d res=%d\n",x,y,result);
     result=special_addition(x,y);
     printf("after call: value of x=%d  y=%d res=%d\n",x,y,result);
-    
-    printf("-------------\n");
-    result=0;
-    printf("before call: value of a=%d  b=%d res=%d\n",a,b,result);
-    result=special_addition(a, b);
-    printf("after call: value of a=%d  b=%d res=%d\n",a,b,result);
 }
-
 
 int  special_addition(int a, int b){
     printf("\t In func: before operation: values: a=%d  b=%d\n",a,b);
     a=a*2;
-    b=b*2;
+    b= b * 2;
     printf("\t In func: after operation: values: a=%d  b=%d\n",a,b);
-    return a+b;
-    
+    return a+ b;
 }
+
 ```
 
+
 Study this output carefully. Key notes:
-1. x and y are mapped onto the a and b in the special function. A "copy" of the values are passed to the funciton. Though the called function (special_additon) modifies the copy during operation, the original value in the caller function (main) are not altered
-2. a=40 and b=50 in the main() are passed to the special_addition() function. That a and b are NOT the same as the ones in the special function though their names are identical. As before, they are passed by value i.e. a 'copy' is passed to the called function and modifications do not affect the original
+1. x and y are mapped onto the a and b in the special function. A "copy" of the values are passed to the funciton. Though the called function special_additon() modifies the copy during operation, the original value in the caller function (main) are not altered. This is called "passing by value"
 
 
 Output is as follows:
@@ -114,11 +105,6 @@ before call: value of x=4  y=5 res=0
          In func: before operation: values: a=4  b=5
          In func: after operation: values: a=8  b=10
 after call: value of x=4  y=5 res=18
--------------
-before call: value of a=40  b=50 res=0
-         In func: before operation: values: a=40  b=50
-         In func: after operation: values: a=80  b=100
-after call: value of a=40  b=50 res=180
 ```
 
 ## Passing parametes by Reference
@@ -130,43 +116,44 @@ Key notes:
 
 ```c
 #include <stdio.h>
-int  special_addition(int a, int *b);       //b will be expecting reference; b is a "pointer"
+int  special_addition(int a, int *b);   //b is a pointer. It expects a reference to be passed
 int main(){
     int result=0;
     int x=4;
     int y=5;
-    int a=40;
-    int b=50;
     printf("before call: value of x=%d  y=%d res=%d\n",x,y,result);
-    result=special_addition(x,&y);          //note that y is being passed by reference. Its address
+    result=special_addition(x,&y);      //notice use of & in the function call.
     printf("after call: value of x=%d  y=%d res=%d\n",x,y,result);
-    
-    printf("-------------\n");
-    result=0;
-    printf("before call: value of a=%d  b=%d res=%d\n",a,b,result);
-    result=special_addition(a, &b);
-    printf("after call: value of a=%d  b=%d res=%d\n",a,b,result);
 }
 
-
-int  special_addition(int a, int *b){       //in the funciton, use *b to obtain the value
+//b is expecting a reference to an int to be passed to it
+//b is a "pointer variable. Pass a reference/address/pointer to it.
+int  special_addition(int a, int *b){   
+    //use *b to dereference the pointer, to get the actual int
     printf("\t In func: before operation: values: a=%d  b=%d\n",a,*b);
     a=a*2;
-    *b= *b * 2;
+    *b= *b * 2;     //note use of *b 
     printf("\t In func: after operation: values: a=%d  b=%d\n",a,*b);
     return a+ *b;
-    
 }
-
 ```
-1. In the function prototype `int  special_addition(int a, int *b)`, b is declared as a reference.
+
+
+1. In the function prototype `int  special_addition(int a, int *b)`, b is declared as a pointer.
 2. `b` variable is not an integer but a reference to an integer. (also called a pointer to an integer)
-3. Within the function b is *derefernced* and used as `*b` eg `*b= *b * 2;`
+3. Within the function b is *derefernced* and used as `*b` eg `*b= *b * 2;` It could equally be written without spacing eg `*b=*b*2;`
 4. `*b` is a 'dereferenced' integer pointer, and refers to the actual int.
 
-<!--
-consider simplifying the example and removing duplication parameter names
- -->
+The output is as follows:
+```
+before call: value of x=4  y=5 res=0
+         In func: before operation: values: a=4  b=5
+         In func: after operation: values: a=8  b=10
+after call: value of x=4  y=10 res=18
+```
+
+Note clearly that this tiem, the value of y in the main has been modified (whereas x which was still passed by value has not been modifed)
+
 
 
  ## Static variables
@@ -206,10 +193,6 @@ v2: current x=2
 v2: current x=3
 ```
 
-<!-->
-# Exercise 1
-Determine the output of the following piece of code: FSM. defere until enum
--->
 
 ## Summary:
 - Function variables are local to the function
