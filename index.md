@@ -5,7 +5,7 @@
 
 * [Basic Macros & Bitwise operations ](3basicmacros_bitwiseoperations.md)  
 * [Functions](4functions.md)
-* [Enumerated Types](5enumerated_types.md)
+* [Enumerated Types](5enumeratedtypes.md)
 * [Structures](6structures.md)
 * [Arrays](7arrays.md)
 * [Strings](8strings.md)
