@@ -55,3 +55,79 @@ blue selected
 other color
 red selected
 ```
+
+
+Detetrmine the output of the following example:
+```c
+#include <stdio.h>
+void washing_machine();
+int main(){
+    while(1){
+        washing_machine();
+    }
+}
+
+void washing_machine(){
+    enum states {idle, filling, wash, drain, rinse,spin, stop};
+    static enum states next_state=idle; //initialized in the declaration
+
+    switch(next_state){
+        case filling:
+            printf("filling\n");
+            next_state=wash;
+            break;
+        case wash:
+            printf("washing\n");
+            next_state=drain;
+            break;
+        case drain:
+            printf("draining\n");
+            next_state=rinse;
+            break;
+        case rinse:
+            printf("rinsing\n");
+            next_state=stop;
+            break;
+        case spin:
+        default:
+            printf("default state: stopped or idle. May restart\n");
+            next_state=filling;
+    }   
+}
+```
+
+Can you confirm why the output will be the following? Note that the function is called repeatedly but this output seems to be differnt each time. Why?
+```
+default state: stopped or idle. May restart
+filling
+washing
+draining
+rinsing
+default state: stopped or idle. May restart
+filling
+washing
+....
+```
+<!-- 
+Another example :
+```c
+#include <stdio.h>
+int main(){
+    enum states {wash, spin1, rinse1, spin2, dry, stop};
+    enum states mystate;
+    for(mystate=wash; mystate<=stop; mystate++)
+        printf("current state=%d\n", mystate);
+}
+```
+
+output:
+```
+current state=0
+current state=1
+current state=2
+current state=3
+current state=4
+current state=5
+```
+
+-->

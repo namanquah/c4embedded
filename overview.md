@@ -6,8 +6,20 @@
 
 * [Basic Macros & Bitwise operations ](3basicmacros_bitwiseoperations.md)  
 * [Functions](4functions.md)
+* [Enumerated Types](5enumerated_types.md)
+* [Structures](6structures.md)
+* [Arrays](7arrays.md)
+* [Strings](8strings.md)
+* [File organization](9file_organization.md)
+* [Dynamic memory allocation](10dynamic_memory.md)
 <!--
+* [File Oganization](file_oganization.md)
 
+exerice on how to call functions.
+file oganization
+strings
+dynamic memory allocation 
+writing to files
 
  pass by value & ref
 static, extern, code organisation in files  (?)
@@ -23,7 +35,7 @@ static, extern, code organisation in files  (?)
 [Pointers]
 * macro definitions	#define P(x) (1<<x)
 
-[Arrays]
+
 * arrays,	int a[]..
 
 

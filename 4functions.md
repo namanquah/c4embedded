@@ -152,7 +152,7 @@ before call: value of x=4  y=5 res=0
 after call: value of x=4  y=10 res=18
 ```
 
-Note clearly that this tiem, the value of y in the main has been modified (whereas x which was still passed by value has not been modifed)
+Note clearly that this time, the value of y in the main has been modified (whereas x which was still passed by value has not been modifed). If you have read this sentence send me the message 'bisect' and do not tell anyone in the class about this. Am just checking who is reading. Keep reading. By making use of multiple pointer variables as parameters, we can make a function modify more than one variable.
 
 
 
@@ -205,4 +205,21 @@ v2: current x=3
 
 
 
+## Evalute
+Examine the following function declarations
+```c
+int fxn1(int x, int y, int z);
+void fxn2(int a, int *b, int *c);
+```
 
+Examine also the following variable definitions
+```c
+int p,q,r;
+int result;
+p=3;q=4; r=5;
+
+```
+
+- What is the correct way to call the function `fxn1` with p,q and r? (assign return to result variable)
+- will there be an error compiling if the result is not assigned to a variable?
+- What is the correct way to call the functions `fxn2` with p,q and r?
