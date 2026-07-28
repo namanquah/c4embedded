@@ -1,6 +1,8 @@
 
+<!-- Retire this page
+
 # Main Topics
-* [Basic Code structure](index.md) 
+* [Basic Code structure](0hello_world.md) 
 * [Variables (and variable size)](1variables.md) 
 * [Control structures](2controlstructures.md)
 
@@ -12,6 +14,9 @@
 * [Strings](8strings.md)
 * [File organization](9file_organization.md)
 * [Dynamic memory allocation](10dynamic_memory.md)
+
+
+-->
 <!--
 * [File Oganization](file_oganization.md)
 
