@@ -2,11 +2,11 @@
 
 This is an abridged version of my appendix on C programming. This will be a mix of totorial and brief exercises to try.
 
-To run C programs, a compiler is needed. YOu may install VSCode as an editor and include a C extension, or simply visit <a href="https://www.onlinegdb.com/" target="_blank">Online GDB</a>  to execute code without installing anything.  For online gdb, do select C as the language.
+To run C programs, a compiler is needed. You may install VSCode as an editor and include a C extension, or simply visit <a href="https://www.onlinegdb.com/" target="_blank">Online GDB</a>  to execute code without installing anything.  For online gdb, do select C as the language.
 
 
 ## first program: _Hello World!_
-The first program to excute is a hello world program 
+The first program to execute is a hello world program 
 
 It will look as follows:
 
