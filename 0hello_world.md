@@ -27,7 +27,7 @@ int main()        //this is also a comment, showing where the program starts
 ```
 The key elements of the program are as follows: 
 * Program starts from main() which is a function, and executes sequentially. The function is expeced to return an integer (int)
-* printf() is a function to print the string/text passed to it (not quite available in embedded systems as there is not screen)
+* printf() is a function to print the string/text passed to it (not quite available in embedded systems as there is no screen)
 * program ends by returning a value of 0.
 
 Note that statements end with a semicolon ; and the contents of the function is enclosed in the block bounded by { and }
