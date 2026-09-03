@@ -2,7 +2,7 @@
 
 ## Basic Macros
 
-Macros are a names that represent a value or a fragment of code that is given a symbolic name. They are declare in the form `#define SYMBOLIC_NAME value`
+Macros are a names that represent a value or a fragment of code that is given a symbolic name. They are declared in the form `#define SYMBOLIC_NAME value`
 
 eg
 ```c
@@ -15,7 +15,7 @@ eg
 #define SHIFT(X)    (ONEBIT<<X)             //defined in terms of another Macro
 ```
 
-Note the absence of semicolons ; becuase after subsitution (by a pre-processor, and before compilation takes place) the updated code should read correct and by syntatically correct. Macros can take a parameter. SQR(3) will be evaluted to 3*3. Similarly MASK(3) will be replaced with (1<<3). _Note that these are NOT functions._
+Note the absence of semicolons ; because after substitution (by a pre-processor, and before compilation takes place) the updated code should read correct and be syntactically correct. Macros can take a parameter. SQR(3) will be evaluated to 3*3. Similarly MASK(3) will be replaced with (1<<3). _Note that these are NOT functions._
 
 Also note that these are not "constant". In c, to define a constant, use the keyword `const` in front of the declaration eg
 ```c
@@ -24,7 +24,7 @@ const float pi 3.142;
 
 
 ## Bitwise operations
-It is generally needed to set and clear individual bits of a bit-pattern stored in a regsiter (memory location). Why will this arise? Say 8 pins on a microcontroller may be mapped to 8 bits in a register, and we want to turn on some of the pins (by making the bits 1) or turn off some pins by making the bits 0. It could also be that we sets of 4 bits are used to configure a pin in a particular way. I may need to set a subset of 4 bits to a particular value to for example make a pin an input pin or output pin. Bitwise operations should enable me to set, clear, toggle or even determine what was previously set.
+It is generally needed to set and clear individual bits of a bit-pattern stored in a regsiter (memory location). Why will this arise? Say 8 pins on a microcontroller may be mapped to 8 bits in a register, and we want to turn on some of the pins (by making the bits 1) or turn off some pins by making the bits 0. It could also be that sets of 4 bits are used to configure a pin in a particular way. I may need to set a subset of 4 bits to a particular value to for example make a pin an input pin or output pin. Bitwise operations should enable me to set, clear, toggle or even determine what was previously set.
 
 Bit positions in a register are counted from 0 at the Least Significant Bit position.
 
@@ -47,7 +47,7 @@ reg|= (7<<2);       //this will shift 111BIB left by 2, ie 11100
 
 ### Clear a bit
 To clear a bit the operation is to AND a NOT of the MASK
-To cearl bit 2 of reg, the following are equivalent:
+To clear bit 2 of reg, the following are equivalent:
 ```c
 reg = reg & ~(0x4);
 reg = reg & ~4;
