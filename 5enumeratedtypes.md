@@ -1,6 +1,6 @@
 # Enumerated Types
 
-Enumerated types are user-defined type that assigns readable names to a set of integer constants. It genereally makes the code more readable. `enum led {red, yellow, green, blue, white, black};` automatially makes red=0, yellow=1 and so on, black =5. 
+Enumerated types are a user-defined type that assigns readable names to a set of integer constants. It genereally makes the code more readable. `enum led {red, yellow, green, blue, white, black};` automatially makes red=0, yellow=1 and so on, black =5. 
 Declare an enum variable (in C) as follows:
 ```c
 enum led myled;
