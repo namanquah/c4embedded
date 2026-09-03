@@ -141,7 +141,7 @@ int  special_addition(int a, int *b){
 
 1. In the function prototype `int  special_addition(int a, int *b)`, b is declared as a pointer.
 2. `b` variable is not an integer but a reference to an integer. (also called a pointer to an integer)
-3. Within the function b is *derefernced* and used as `*b` eg `*b= *b * 2;` It could equally be written without spacing eg `*b=*b*2;`
+3. Within the function b is *dereferenced* and used as `*b` eg `*b= *b * 2;` It could equally be written without spacing eg `*b=*b*2;`
 4. `*b` is a 'dereferenced' integer pointer, and refers to the actual int.
 
 The output is as follows:
@@ -157,7 +157,7 @@ Note clearly that this time, the value of y in the main has been modified (where
 
 
  ## Static variables
- When a variable is qualified as static in *a function*, it is initialized only once and remembers its value between function call.
+ When a variable is qualified as static in *a function*, it is initialized only once and remembers its value between function calls.
 
  ```c
 #include <stdio.h>
@@ -201,11 +201,11 @@ v2: current x=3
 - When paramters are passed by reference, the modification directly change the original variables.
 - Function calls that pass parameters by reference run faster and use less memory 
 - Functions may call other functions
-- Static variables in a function are intialized only once!They return their value even after a function has exited/gone out of scope.
+- Static variables in a function are initialized only once! They return their value even after a function has exited/gone out of scope.
 
 
 
-## Evalute
+## Evaluate
 Examine the following function declarations
 ```c
 int fxn1(int x, int y, int z);
@@ -220,6 +220,6 @@ p=3;q=4; r=5;
 
 ```
 
-- What is the correct way to call the function `fxn1` with p,q and r? (assign return to result variable)
-- will there be an error compiling if the result is not assigned to a variable?
+- What is the correct way to call the function `fxn1` with p,q and r? (assign returned value to the variable named “result”)
+- will there be an error compiling if the returned value from the function is not assigned to a variable?
 - What is the correct way to call the functions `fxn2` with p,q and r?
