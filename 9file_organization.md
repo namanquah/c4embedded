@@ -21,15 +21,15 @@ There is a better way of organizing the code as the project increases in size.
 
 1. First move all related function prototypes, #defines (macros) and global variables  to a file with a .h extension as a header file. This will become a library you can share with others. eg as a driver file header.
 2. Keep all function implementations corresponding to the function prototypes in a file with a .c extension. (using same name is the convention)
-3. Keep the main file to run in a .c file. This will be the only file with a main() funciton
+3. Keep the main file to run in a .c file. This will be the only file with a main() function
 
-Ther will be multiple header files and multiple corresponding implementaiton files.
+There will be multiple header files and multiple corresponding implementation files.
 
 Import the .h file into both its implementation .c as well as the file with the main() function. This is illustrated below.
 
 
 ### Example file with main
-This example uses code from the section on functions covered earlier. This file have have any name. Commonly it may be named `main.c`
+This example uses code from the section on functions covered earlier. This file can have any name. Commonly it may be named `main.c`
 ```c
 #include <stdio.h>
 #include <file1.h>
@@ -48,7 +48,7 @@ int main(){
 
 The example header file is saved in a file named `file1.h`
 A few notes:
-- Since there may be multiple "libraries"  of .h and .c pairs created, it is quite likely that one library may #include another library and the main will also include the same library. To prevent errors as a result of this kind of duplicated imports, we place an "include guard" at in each header file, to prevent the compiler from including it twice.
+- Since there may be multiple "libraries"  of .h and .c pairs created, it is quite likely that one library may #include another library and the main will also include the same library. To prevent errors as a result of this kind of duplicated imports, we place an "include guard" in each header file, to prevent the compiler from including it twice.
 
 In this case, it is #ifndef FILE1_H, then we #define it so it cannot be included subsequently. (it is only included when it has not been previously defined, which is once)
 
