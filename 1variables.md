@@ -5,7 +5,7 @@ Use variables to hold a value. The type of variable must be specified. The main 
 * `float` - eg 3.142
 * `char`  -for single characters eg 'a', and special characters like '\n' , the newline character
 
-To print a variable in a `printf()` statement, a format specified is included as a place holder in the string to print. The variable to print is suppiled after the string to print, after a comma.
+To print a variable in a `printf()` statement, a format specifier is included as a place holder in the string to print. The variable to be printed is supplied after the string to print, after a comma.
 
 The placeholder are as follows
 | Type | format specifier |
@@ -33,7 +33,7 @@ int main(){
 ## Bits, Binary, HEX and Fixed size integer variables
 
 
-Know this, especially the conversion from BIN to HEX and vice-versa for at least 0-15. Hex numbers are usually written preceeded by 0x eg 15DEC or 1111BIN is 0xF (in HEX) 
+Know this, especially the conversion from BIN to HEX and vice-versa for at least 0-15. Hex numbers are usually written preceeded by 0x eg 0xF (is in HEX) and is equivalent to 15DEC or 1111BIN.
 
 
 | Number (Decimal) | Binary | Hexadecimal |
@@ -60,11 +60,11 @@ Some easy things to rembemer:
 * 11 is the number afterwars ie 10 11
 * 7 is 111
 * 15 is 1111
-* 14 is double 1110 (shift numbers left to double); just as 5 is 101, ten is 5 shifted left
+* 14 is double of 7. ie 14 is  1110 (shift numbers left to double); just as 5 is 101, ten is 5 shifted left
 * 6 is 110, and 12 is 1100; 13 is the next number 1101
 * just know the rest, 9 is 1001
 
-Given any base 10(deicmal) number you can convert to HEX or BIN with say a calculator (or other means). Given a HEX number, you can convert to BIN quckly by writing out each number as its equivalent 4-bit number. Examples:
+Given any base 10(deicmal) number you can convert to HEX or BIN with say a calculator (or other means). Given a HEX number, you can convert to BIN quickly by writing out each number as its equivalent 4-bit number. Examples:
 
 |HEX.     | Binary Equivalent   |
 |-------- | --------------------|
@@ -76,7 +76,7 @@ These two numbers above are all 16-bits long (2 bytes each)
 
 _An integer may be 4 bytes long (or 2, depending on the hardware archtecture)_
 
-The `int` type on the STM32 (and ARM processors) is 4 bytes. If we wish to store a number in exactly 8 or 16 bits, a differnt type can be used. For that, include _stdint.h_, which has the appropriate definitions. They key types are as follows:
+The `int` type on the STM32 (and ARM processors) is 4 bytes. If we wish to store a number in exactly 8 or 16 bits, a differnt type can be used. For that, include the header file  _stdint.h_, which has the appropriate definitions. The key types are as follows:
 
 | Type      | description|
 |-----------|-----------------------|
@@ -113,8 +113,8 @@ a=F1A31C01  b=1234 c=12 and d=1
 As an aside: to cure the warning that may be generated on the line `uint8_t d=0xF1A31C01;` do a "cast" to convert from one compatible type to antoher as follows: `uint8_t d= (uint8_t)0xF1A31C01;`. Still, only 0x01 will be stored, but without a warning.
 
 There is a consequence of storing a large number in a small size. It gets truncated. 
-1. Thee largest number that can be stored in uint8_t is 255.
-2. If it is stored in a **signed** type, then if the first bit is 1, it will a negative number, stored in _two's complement notation_. The `int8_t` type stores numbers from -128 to +127
+1. The largest number that can be stored in uint8_t is 255.
+2. If it is stored in a **signed** type, then if bit seven (the leftmost) is 1, it will a negative number, stored in _two's complement notation_. The `int8_t` type stores numbers from -128 to +127
 
 ## Arithmetic
 **Supplementary useful information**  Numbers can be mixed together but be careful of <font color="red">integer division </font>
@@ -128,7 +128,7 @@ y= y+x;         //will give a warning, but answer is 66 (decimal is dropped)
 printf("%d\n",y);            
 y=22;
 int z=3;
-float a=y/z;    //results in 7 ie 22/3 :This an integer division. The franctional part is lost
+float a=y/z;    //results in 7 ie 22/3 :This an integer division. The fractional part is lost
 printf("%f\n",a);
 a= z/y;         //results in 0  ie 3/22: This is integer division there is no whole number part
 printf("%f\n",a);
