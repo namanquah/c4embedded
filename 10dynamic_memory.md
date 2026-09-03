@@ -4,7 +4,7 @@ These are topics we may use only briefly but you can explore
 
 To have memory allocated to a type, you must ask for the memory, check if it was allocated, used it and then free it up.
 
-Illustrating with creating memory for the type `int`, but this works for struct, arrays and any other types
+Illustrating with a trivial example of creating memory for the type `int`, but this works for struct, arrays and any other types
 
 ```c
 #include <stdio.h>   
