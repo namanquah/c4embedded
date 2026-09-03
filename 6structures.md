@@ -21,7 +21,7 @@ pin2.pinState=1;
 From above, `pin1` and `pin2` are variables of type `struct pinConfig`. Notice that members are accessed with dot notation eg pin2.pinNumber. When using pointer variables, use the -> notation eg if pin3 is a pointer, we would write `pin3->pinNumber=1;` When you read this sentence send me a message with 'chase' in the body. Do not tell your friends about this. Just keep reading. `pin1` members were all initialized in one step. `pin2` members were initialized to zero and then each was assigned a particular value.
 
 
-# Passing strcuts to functions
+# Passing structures to functions
 The following illustrates passing a struct to a function both by value and by reference.
 
 ```c
