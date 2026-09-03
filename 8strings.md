@@ -3,7 +3,7 @@ C has no native string type, instead an array of characters. `"Nathan"` is a str
 ```c
 'N','a','t','h','a','n','\0'
 ```
-There are 8 distinct charcters, the last charcter '\0' is the null terminating character. Characters are processed as part of the string until this charcater is encoutered.
+There are 8 distinct characters, the last character '\0' is the null terminating character. Characters in the array are processed as part of the string until this character is encountered.
 
 Strings can be defined in two ways, with differnt consequneces. When declared as an array of `char`, eg `char fname[]={'K','o','f','i','\0'};` each character can be changed like in a normal array. If declared as a pointer to `char`, then it is immutable (unchangeable). eg `char *surname="Mensah";`
 
@@ -33,7 +33,7 @@ New firstname is Yofi
 Notes: many functions expect a pointer to char ie `char *`. For all those simply provide the name of the array or the name of the variable declared as pointer to char.
 
 # Using string functions
-It is often neccessary to compose stirngs and display them say on an LCD/terminal, or save in a log. In that case, create a char array as a string buffer and write/print into it, and then display as needed. The example below copies two names into one space using differnt methods. The `strcpy()` and `strcat()` functions need the `<string.h>` library is needed and thus included.
+It is often neccessary to compose stirngs and display them say on an LCD/terminal, or save in a log. In that case, create a char array as a string buffer and write/print into it, and then display as needed. The example below copies two names into one space using different methods. The `strcpy()` and `strcat()` functions need the `<string.h>` library is needed and thus included.
 
 ```c
 #include <stdio.h>
@@ -42,7 +42,7 @@ It is often neccessary to compose stirngs and display them say on an LCD/termina
 int main(){
     char fname[]={'K','o','f','i','\0'};    //this is changeable
     char *surname="Mensah";     //this is readonly
-    char buff[80];              //big enough buffer
+    char buff[80];              //big enough char array/ buffer
     
     
     strcpy(buff,fname);     //copy fname string into buff.
