@@ -3,7 +3,7 @@
 ## If statements
 General form:
 ``` c
-if(cond){
+if(condition){
     //actions
 }
 ```
@@ -100,11 +100,11 @@ while (i<10){
 Note that if there is no way to change the condition, it will run for ever. example
 ```c
 while(1){
-    //done on thing
+    //do one thing
     //do another thing
 }
 ```
-The code above will run forever. It is freqently used in embedded systems because the code needs to run forexver and be ever ready to carry out tasks. Embedded Systems programs/firmware must never exit.
+The code above will run forever. It is freqently used in embedded systems because the code needs to run forever and be ever ready to carry out tasks. Embedded Systems programs/firmware must never exit.
 
 Another way of writing an infinite loop is
 ```c
