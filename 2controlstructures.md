@@ -35,15 +35,15 @@ Watch out for assignment instead of checking for equivalence.
 int x=3;
 int y=4;
 if (x==y){
-    print ("equivalent\n"); 
+    printf ("equivalent\n"); 
 } else{
-    print("NOT equivalent\n");      //this will print
+    printf("NOT equivalent\n");      //this will print
 }
 
 if (x=y){
-    print ("equivalent\n");         //this will print. Why??
+    printf ("equivalent\n");         //this will print. Why??
 } else{
-    print("NOT equivalent\n");      
+    printf("NOT equivalent\n");      
 }
 
 
@@ -52,7 +52,7 @@ if (x=y){
 ## For Loops
 General format:
 ```c
-for (initalization; condition ; increment){
+for (initialization; condition ; increment){
     //actions
 }
 ```
